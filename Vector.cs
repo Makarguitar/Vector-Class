@@ -8,16 +8,20 @@ namespace Vector_Class
 {
     public class Vector
     {
-        int X;
-        int Y;
+        public int X;
+        public int Y;
         int Length;
-        public Vector()
+        
+        public Vector(int x, int y)
         {
-            Length = MathF.Sqrt(X * X + Y * Y);
+            Length = (int)MathF.Sqrt(x * x + y * y);
+            X = x;
+            Y = y;
         }
+        
         public override string ToString()
         {
-            return $"Длина вектора ({X}, {Y}): {Length}";
+            return $"Vector's length ({X}, {Y}): {Length}";
         }
     }
 }
